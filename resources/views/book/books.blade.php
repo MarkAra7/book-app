@@ -10,7 +10,7 @@
 <body>
 
     <h2>Add Books</h2>
-    <form action="book/add" method="post">
+    <form action="book/store" method="post">
         @csrf
         <label for="title">Book title:</label><br>
         <input type="text" id="title" name="title"><br>

@@ -12,7 +12,7 @@ Route::get('/book', function () {
 });
 
 Route::post(
-    '/book/add',
+    '/book/store',
     [BookController::class, 'store']
 );
 Route::get(
