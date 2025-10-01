@@ -20,3 +20,12 @@ Route::get(
     [BookController::class, 'show']
 
 );
+
+Route::get(
+    '/book/list',
+    [BookController::class, 'show']
+
+);
+
+Route::get('/book/delete/{id}', [BookController::class, 'delete']);
+Route::get('/book/{id}', [BookController::class, 'showbook']);

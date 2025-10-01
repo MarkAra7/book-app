@@ -11,7 +11,7 @@
 
     <h2>Add Books</h2>
     <form action="book/add" method="post">
-            @csrf
+        @csrf
         <label for="title">Book title:</label><br>
         <input type="text" id="title" name="title"><br>
         <label for="author">Books Author:</label><br>
@@ -22,6 +22,8 @@
 
 
     </form>
+    <br>
+    <a href="/book/list">Skatīti Grāmatu Sarakstu</a>
 
 </body>
 

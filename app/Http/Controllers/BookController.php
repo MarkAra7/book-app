@@ -48,6 +48,20 @@ class BookController extends Controller
 
 
 
-        return redirect('/book')->with('success', 'Chirp created!');
+        return redirect('/book/list')->with('success', 'Chirp created!');
+    }
+
+    public function showbook($id)
+    {
+        $book = Book::findOrFail($id);
+        return view('book.show', ['book' => $book]);
+    }
+
+
+    public function delete($id)
+    {
+        $post = Book::findOrFail($id);
+        $post->delete();
+        return redirect('/book/list');
     }
 }
