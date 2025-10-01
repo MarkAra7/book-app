@@ -9,9 +9,25 @@
 
 <body>
     <h2>{{$book->title}}</h2>
-    <p>{{$book->author}}</p>
+    <p>{{$book->author}}</p><br>
+    <form method="POST" action="/book/delete/{{ $book->id }}">
 
-    <a href="{{ url('/book/delete/' . $book->id) }}">Dzēst Šo Grāmatu</a><br><br>
+        @csrf
+
+        @method('DELETE')
+
+        <button type="submit"
+
+            onclick="return confirm('Are you sure you want to delete this book?')"
+
+            class="btn btn-ghost btn-xs text-error">
+
+            Delete
+
+        </button>
+
+    </form>
+
 
     <a href="/book">Pievienot Jaunu Grāmatu</a><br><br>
     <a href="/book/list">Atpakaļ Pie Gramatu Saraksta</a>
